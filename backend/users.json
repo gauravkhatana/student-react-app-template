@@ -1,0 +1,18 @@
+{
+  "__comment": " This is the command to run json server-- (json-server --watch backend/users.json --port=5000) --",
+  "users": [
+    {
+      "id": "7dc5",
+      "firstname": "kumar",
+      "lastname": "gaurav",
+      "number": "8888888888",
+      "email": "kumar@gmail.com",
+      "password": "root"
+    }
+  ],
+  "students": [
+    {
+      "id": "898f"
+    }
+  ]
+}

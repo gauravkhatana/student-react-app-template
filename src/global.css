@@ -1,0 +1,439 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+::-webkit-scrollbar {
+  display: none;
+}
+
+#root {
+  height: 100vh;
+  width: 100vw;
+  background-image: url("https://as2.ftcdn.net/v2/jpg/07/07/17/23/1000_F_707172368_zQ8bpKSNIA9SU5DcZFue7bxUYrzR6VXK.jpg");
+  background-size: cover;
+  background-position: bottom right;
+}
+.landing {
+  height: 100vh;
+  width: 100vw;
+}
+.default-landing {
+  height: 100vh;
+  width: 100vw;
+}
+
+.landing-nav {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  align-items: center;
+  width: 100vw;
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.119);
+}
+
+.home .nav .logo {
+  margin-left: 20px;
+}
+.nav {
+  padding: 0 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  z-index: 4;
+  height: 11vh;
+  width: 99vw;
+  backdrop-filter: blur(30px);
+  position: relative;
+  top: 3px;
+  margin: 0 3px;
+  border: solid 0.5px rgba(96, 84, 125, 0.605);
+  border-radius: 8px;
+  box-shadow: inset 0 0 50px rgba(95, 125, 84, 0.605);
+}
+.nav .btn {
+  display: flex;
+  height: 47%;
+  gap: 8px;
+  font-size: 0.8em;
+}
+.nav button {
+  box-sizing: content-box;
+  border: none;
+  background-color: rgb(84, 125, 78);
+  border-radius: 6px;
+  padding: 0 8px;
+  transition: all 400ms;
+}
+.nav .btn:hover > :not(:hover) {
+  opacity: 0.7;
+}
+.nav button:hover {
+  box-shadow: 0 0 6px rgb(55, 55, 75);
+  scale: 1.04;
+}
+.nav .btn a {
+  outline: none;
+  text-decoration: none;
+  padding: 6px 9px;
+  color: white;
+  border-radius: 20%;
+}
+.welcome {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  gap: 20px;
+  height: 70vh;
+  width: 80vw;
+  border-radius: 9px;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 0 100px rgba(101, 138, 106, 0.384),
+    inset 0 0 30px rgba(255, 255, 255, 0.297);
+}
+h1 {
+  font-size: 35px;
+  color: rgb(16, 23, 80);
+}
+
+/*Login page CSS*/
+.login,
+.signup {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+
+  background-color: rgba(0, 0, 0, 0.119);
+}
+#back {
+  padding: 2px 8px;
+  border: solid 1px;
+  background-image: linear-gradient(to right, rgb(200, 188, 211), white);
+  border-radius: 0 10px 10px 0px;
+  position: absolute;
+  z-index: 1;
+  top: 10px;
+  left: 10px;
+}
+
+.form {
+  height: 80%;
+  width: 70%;
+  padding: auto;
+  display: flex;
+  backdrop-filter: blur(10px);
+  border-radius: 20px;
+  box-shadow: inset 10px 10px 190px rgba(238, 204, 238, 0.575),
+    20px 20px 40px rgba(54, 12, 54, 0.751);
+}
+form {
+  /*padding: 0 140px;*/
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+  background-color: #d6cae962;
+  border-radius: 18px;
+}
+
+.form input {
+  padding: 7px 12px;
+  outline: none;
+  height: 30px;
+  width: 60%;
+  border: none;
+  border-radius: 25px;
+  align-self: center;
+  justify-self: center;
+}
+.form-btn {
+  display: flex;
+  gap: 30px;
+}
+.form-btn a,
+.form-btn button {
+  border: solid 1px;
+  padding: 5px 15px;
+  border-radius: 12px;
+  text-decoration: none;
+  font-family: system-ui;
+  background-color: rgb(200, 188, 211);
+  color: #0f0f0f;
+  font-size: medium;
+}
+.form-btn button:hover,
+.form-btn a:hover {
+  box-shadow: 0 0 20px 3px white;
+}
+
+/*Home page CSS*/
+
+.menu {
+  color: white;
+  height: 28px;
+  width: 114px;
+  transition: all 700ms;
+  z-index: 5;
+  padding: 0 0 0 0 !important;
+}
+.menu:hover {
+  width: 114px;
+  z-index: 5;
+}
+.mbt {
+  position: relative;
+  top: 2px;
+  text-align: center;
+}
+
+.menu .mn {
+  width: 100%;
+  top: -1px;
+  z-index: 5;
+  border: solid transparent 4px;
+  position: relative;
+  border: transparent solid 5px;
+  width: 130px;
+  height: 0px;
+  overflow: hidden;
+  left: -2px;
+  transition: all 800ms 300ms;
+}
+.menu:hover .mn {
+  height: 120px;
+  width: 130px;
+  z-index: 5;
+}
+
+.menuopt {
+  display: hidden;
+  font-size: 0.7rem !important;
+  font-weight: 700;
+  transition: all 800ms ease-in 300ms;
+  width: 130px;
+  height: 1px;
+  z-index: 5;
+
+  overflow: hidden;
+  z-index: 5;
+  color: grey;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  position: relative;
+  outline: none;
+  font-size: 11px;
+  font-weight: 400;
+  border: none !important;
+  border-radius: 7px;
+  padding: 7px;
+  border: solid 1px;
+  height: 100px;
+  width: 109.5px;
+  top: 0px;
+  left: 0px;
+  background-color: rgb(84, 125, 78);
+  /* box-shadow: 0px 0px 16px rgb(55, 55, 75); */
+}
+
+.menuopt li {
+  transition: all 500ms;
+  z-index: 5;
+  backface-visibility: hidden;
+  position: relative;
+}
+.menuopt li:hover {
+  z-index: 5;
+  scale: 1.03;
+  text-decoration: underline white;
+}
+
+/*All Student Page's CSS*/
+
+.allstu {
+  margin-top: 13px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  z-index: -1;
+}
+
+.stu_table {
+  width: 99%;
+  height: 100%;
+  border-radius: 10px;
+  border: solid 1px;
+  overflow: hidden;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+table,
+th,
+td {
+  border: 1px solid;
+  border-radius: 9px;
+  padding: 8px;
+}
+
+table {
+  width: 100%;
+  height: 1em;
+  border-collapse: collapse;
+  backdrop-filter: blur(20px);
+}
+
+table td {
+  padding: 10px;
+}
+table td button,table td button a {
+  transition: all 400ms;
+}
+table td button:hover,table td button a:hover {
+  scale: 1.1;
+  color: rgba(31, 93, 31, 0.895) !important;
+}
+table td button,
+table a {
+  height: 100%;
+  width: 100%;
+  border: none;
+  cursor: POINTER;
+  font-size: 25px;
+  color: #0f0f0f;
+  background-color: transparent !important;
+}
+
+/*About Page's CSS*/
+.about {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+.abt {
+  height: 97%;
+  width: 95%;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.stf {
+  border-radius: 13px;
+  backdrop-filter: blur(22px);
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.466);
+  padding: 7px;
+}
+
+.stf h3 {
+  color: rgb(62, 29, 94);
+}
+
+.stf p {
+  font-size: 0.8em;
+}
+
+.staffs {
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  height: 58vh;
+
+  overflow-y: auto;
+}
+
+.staffs li {
+  display: flex;
+  gap: 8px;
+}
+
+.staffs li img {
+  aspect-ratio: 2/2;
+  height: 100px;
+}
+
+/*create Student Page's CSS*/
+
+.createstu,
+.updatestu,
+.view {
+  height: 89vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.updatestu,
+.view {
+  position: fixed;
+  z-index: 4;
+  height: 100vh;
+  margin-top: -11vh;
+  width: 100%;
+  background-color: #201e227b;
+}
+
+/*View pagee css */
+
+.userData {
+  position: relative;
+  backdrop-filter: blur(10px);
+  background-color: #dbcbe382;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  z-index: 5;
+  padding: 30px;
+  height: 500px;
+  width: 350px;
+  font-size: 25px;
+  border-radius: 15px;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  box-shadow: 10px 10px 30px rgba(72, 45, 72, 0.615);
+}
+
+.userData .logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.userData .ulogo {
+  padding: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 260px;
+  width: 260px;
+  border-radius: 100%;
+
+  box-shadow: 0 0 100px rgba(106, 89, 106, 0.663);
+  font-size: 160px;
+}
+
+.userData p {
+  font-size: 18px;
+  background-color: aliceblue;
+  padding: 4px 19px;
+  border-radius: 6px;
+  box-shadow: 10px 10px 20px rgb(131, 116, 136);
+  text-decoration: dotted rgb(69, 34, 69);
+}
