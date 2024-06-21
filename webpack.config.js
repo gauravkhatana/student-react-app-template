@@ -4,29 +4,31 @@ import MiniCssExtractPlugin from "mini-css-extract-plugin";
 import OptimizeCssAssetsPlugin from "optimize-css-assets-webpack-plugin";
 import TerserPlugin from "terser-webpack-plugin";
 import webpack from "webpack";
+import { CleanWebpackPlugin } from "clean-webpack-plugin";
+import { fileURLToPath } from "url";
 
-const __dirname = new URL(".", import.meta.url).pathname;
+const __dirname = path.dirname(fileURLToPath(import.meta.url));
 
 export default function webpackConfig(webpackEnv, argv) {
-  const isEnvDevelopment = webpackEnv === "development";
-  const isEnvProduction = webpackEnv === "production";
+  console.log(webpackEnv);
+  console.log(argv);
+
+  const isEnvDevelopment = argv.mode === "development";
+  const isEnvProduction = argv.mode === "production";
+
+  console.log("isEnvDevelopment : ", isEnvDevelopment);
+  console.log("isEnvProduction : ", isEnvProduction);
 
   return {
     mode: webpackEnv,
 
-    resolve: {
-      extensions: [".js", ".jsx"], // add '.jsx' if using JSX
-      modules: [
-        path.resolve(__dirname, "src"), // Resolve modules from src directory
-        "node_modules", // Also resolve modules from node_modules
-      ],
-    },
-
     entry: "./src/main.jsx",
 
     output: {
-      filename: isEnvProduction ? "bundle.[contenthash].js" : "bundle.js",
       path: path.resolve(__dirname, "dist"),
+      filename: isEnvProduction
+        ? "prod-build.[contenthash].js"
+        : "dev-build.js",
       publicPath: "/",
     },
 
@@ -34,7 +36,13 @@ export default function webpackConfig(webpackEnv, argv) {
       port: 3030,
       historyApiFallback: true,
     },
-
+    resolve: {
+      extensions: [".js", ".jsx"], // add '.jsx' if using JSX
+      modules: [
+        path.resolve(__dirname, "src"), // Resolve modules from src directory
+        "node_modules", // Also resolve modules from node_modules
+      ],
+    },
     module: {
       rules: [
         {

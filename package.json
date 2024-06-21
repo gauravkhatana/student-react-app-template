@@ -8,7 +8,7 @@
     "lint": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview",
     "start:dev": "webpack serve --mode development --config webpack.config.js",
-    "build": "webpack --mode production --config webpack.config.js",
+    "build": "webpack build --mode production --config webpack.config.js",
     "serve": "webpack serve --mode production --config webpack.config.js"
   },
   "dependencies": {
@@ -29,6 +29,7 @@
     "@types/react-dom": "^18.0.0",
     "@vitejs/plugin-react": "^2.1.4",
     "babel-loader": "^8.2.3",
+    "clean-webpack-plugin": "^4.0.0",
     "css-loader": "^6.5.1",
     "eslint": "^8.7.0",
     "eslint-plugin-react": "^7.27.0",

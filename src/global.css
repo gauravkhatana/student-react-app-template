@@ -93,9 +93,15 @@
   box-shadow: 0 0 100px rgba(101, 138, 106, 0.384),
     inset 0 0 30px rgba(255, 255, 255, 0.297);
 }
-h1 {
+.welcome h1 {
+  position: relative;
   font-size: 35px;
   color: rgb(16, 23, 80);
+}
+
+.welcome p {
+  overflow: scroll;
+  position: relative;
 }
 
 /*Login page CSS*/
@@ -114,7 +120,7 @@ h1 {
 #back {
   padding: 2px 8px;
   border: solid 1px;
-  background-image: linear-gradient(to right, rgb(200, 188, 211), white);
+  background-image: linear-gradient(to right, rgb(188, 211, 194), white);
   border-radius: 0 10px 10px 0px;
   position: absolute;
   z-index: 1;
@@ -129,7 +135,7 @@ h1 {
   display: flex;
   backdrop-filter: blur(10px);
   border-radius: 20px;
-  box-shadow: inset 10px 10px 190px rgba(238, 204, 238, 0.575),
+  box-shadow: inset 10px 10px 190px rgba(204, 238, 211, 0.575),
     20px 20px 40px rgba(54, 12, 54, 0.751);
 }
 form {
@@ -141,7 +147,7 @@ form {
   align-items: center;
   justify-content: center;
   gap: 30px;
-  background-color: #d6cae962;
+  background-color: #cbe9ca62;
   border-radius: 18px;
 }
 
@@ -166,7 +172,7 @@ form {
   border-radius: 12px;
   text-decoration: none;
   font-family: system-ui;
-  background-color: rgb(200, 188, 211);
+  background-color: rgb(188, 211, 191);
   color: #0f0f0f;
   font-size: medium;
 }
@@ -297,10 +303,12 @@ table {
 table td {
   padding: 10px;
 }
-table td button,table td button a {
+table td button,
+table td button a {
   transition: all 400ms;
 }
-table td button:hover,table td button a:hover {
+table td button:hover,
+table td button a:hover {
   scale: 1.1;
   color: rgba(31, 93, 31, 0.895) !important;
 }
