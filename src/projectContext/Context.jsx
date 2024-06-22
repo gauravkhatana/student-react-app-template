@@ -8,9 +8,9 @@ const Context = ({ children }) => {
   let [loginUser, setLoginUser] = useState({});
 
   let fetchd = async () => {
-    const { data } = await axios.get("http://localhost:5000/users");
+    const { data } = await axios.get("http://localhost:3000/users");
     console.log(data);
-    setServerData(data);
+    setServerData(data.users);
   };
 
   useEffect(() => {
@@ -21,6 +21,7 @@ const Context = ({ children }) => {
   let { Provider } = global;
 
   let validate = (userData) => {
+    console.log(serverData);
     const user = serverData.filter((obj) => {
       console.log(obj.email);
       console.log(userData.email);

@@ -11,8 +11,9 @@ const AllStudents = () => {
   let [deleteCount, setDeleteCount] = useState(0);
 
   let fetchd = async () => {
-    let { data } = await axios.get("http://localhost:5000/users");
-    setUData(data);
+    let { data } = await axios.get("http://localhost:3000/students");
+    setUData(data.students);
+    
   };
 
   useLayoutEffect(() => {
@@ -20,7 +21,7 @@ const AllStudents = () => {
   }, [deleteCount]);
 
   let deleteUser = (id) => {
-    axios.delete(`http://localhost:5000/users/${id}`);
+    axios.delete(`http://localhost:3000/students/${id}`);
     setDeleteCount((prev) => prev + 2);
     console.log(deleteCount);
     // navigate("/home/allstudents")
@@ -47,7 +48,7 @@ const AllStudents = () => {
               {uData.map((student) => {
                 return (
                   <tr>
-                    <td>{student.id}</td>
+                    <td>{student._id}</td>
                     <td>{student.firstname + " " + student.lastname}</td>
                     <td>{student.number}</td>
                     <td>{student.email}</td>
@@ -69,7 +70,7 @@ const AllStudents = () => {
                       </button>
                     </td>
                     <td>
-                      <button onClick={() => deleteUser(student.id)}>
+                      <button onClick={() => deleteUser(student._id)}>
                         <MdDelete />
                       </button>
                     </td>

@@ -23,7 +23,7 @@ const UpdateStudent = () => {
   const fromHandler = (e) => {
     e.preventDefault();
     const serverData = axios.put(
-      `http://localhost:5000/users/${state.id}`,
+      `http://localhost:3000/students/${state._id}`,
       userData
     );
     console.log(serverData);

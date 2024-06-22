@@ -57,7 +57,7 @@ const About = () => {
             <li>
               <img
                 src="https://comicvine.gamespot.com/a/uploads/square_small/11112/111121983/7945057-0301732156-latest.jpg"
-                alt
+                alt=""
               />
               <div>
                 <h4>Amado</h4>

@@ -14,7 +14,7 @@ const CreateStudent = () => {
 
   const fromHandler = (e) => {
     e.preventDefault();
-    const serverData = axios.post("http://localhost:5000/users", userData);
+    const serverData = axios.post("http://localhost:3000/students", userData);
     toast.success("User Added succeessfully");
     navigate("/home/about");
   };

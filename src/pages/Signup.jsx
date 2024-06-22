@@ -15,7 +15,7 @@ const Signup = () => {
   const fromHandler = (e) => {
     e.preventDefault();
     const serverData = axios.post("http://localhost:3000/users", userData);
-    console.log(serverData);
+    console.log("response of signed user api : ", serverData);
     toast.success("User Signed-Up succeessfully");
   };
   return (
