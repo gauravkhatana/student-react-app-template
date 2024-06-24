@@ -22,7 +22,7 @@ const UpdateStudent = () => {
 
   const fromHandler = (e) => {
     e.preventDefault();
-    const serverData = axios.put(
+    const serverData = axios.patch(
       `http://localhost:3000/students/${state._id}`,
       userData
     );
